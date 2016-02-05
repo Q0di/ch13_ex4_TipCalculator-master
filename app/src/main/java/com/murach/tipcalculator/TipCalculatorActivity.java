@@ -115,8 +115,10 @@ implements OnEditorActionListener, OnClickListener {
         else {
             billAmount = Float.parseFloat(billAmountString);
         }
-        
-        // calculate tip and total 
+
+        int progress = percentSeekBar.getProgress();
+            tipPercent = (float) progress/100;
+        // calculate tip and total
         float tipAmount = billAmount * tipPercent;
         float totalAmount = billAmount + tipAmount;
         
@@ -141,7 +143,7 @@ implements OnEditorActionListener, OnClickListener {
     @Override
     public void onClick(View v) {
 
-        tipPercent = percentSeekBar.getProgress()-.01f;
+
         calculateAndDisplay();
 
       /*  switch (v.getId()) {
