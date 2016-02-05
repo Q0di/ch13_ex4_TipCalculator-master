@@ -58,7 +58,7 @@ implements OnEditorActionListener, OnClickListener {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 progress = percentSeekBar.getProgress();
                // NumberFormat percent = NumberFormat.getPercentInstance();
-              //  percentTextView.setText(percent.format(progress));
+              //percentTextView.setText(percent.format(progress));
                 percentTextView.setText(Integer.toString(progress));
 
             }
